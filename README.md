@@ -1,7 +1,7 @@
 ## Technical & Analytical Skills
-**Programming:** Python, SQL, SAS, R, Matlab  
-**Data Science & Analysis:** Data wrangling, feature engineering, dimensionality reduction, data visualization (ggplot2, Matplotlib, Seaborn), hypothesis testing, analysis of variance  
-**Statistical Modelling & AI:** Re
+**PROGRAMMING:** Python, SQL, SAS, R, Matlab  
+**DATA SCIENCE & ANALYSIS:** feature engineering, causal analysis, hypothesis testing, data visualization
+**EPIDEMIOLOGICAL METHODS:** Biostatistics, Survival analysis, meta-research, observational study design. 
 
 ## Work Experience
 
@@ -37,7 +37,7 @@
 **ORCID:** 0009-0006-7134-8751  
 Collaborated among interdisciplinary research groups as main biostatistician and machine learning engineer:  
 - *Validation of the Situational Sleepiness Scale* – Poster Presentation, SLEEP 2023, Texas, USA  
-- *0701 Perceived Exercise Response Heterogeneity in Adults with Restless Legs Syndrome*  
+- [*0701 Perceived Exercise Response Heterogeneity in Adults with Restless Legs Syndrome*](https://academic.oup.com/sleep/article/47/Supplement_1/A300/7654848)  
 - *Long COVID Cortisol Letter* – Under Review, Nature Matters Arising (2025)  
 - *Optimization of Stanford Cataplexy Questionnaire Scoring for Narcolepsy Detection* – In Progress, Expected 2025 & Poster Presentation, SLEEP 2025, Seattle, USA  
 - *Efficacy of Long COVID Treatment: A Longitudinal Study* – In Progress, Expected 2025  
