@@ -1,4 +1,9 @@
-## Research & Work Experience
+## Technical & Analytical Skills
+**Programming:** Python, SQL, SAS, R, Matlab  
+**Data Science & Analysis:** Data wrangling, feature engineering, dimensionality reduction, data visualization (ggplot2, Matplotlib, Seaborn), hypothesis testing, analysis of variance  
+**Statistical Modelling & AI:** Re
+
+## Work Experience
 
 ### Stanford University – Mignot Laboratory  
 **Research Assistant & Visiting Researcher (2021–Present)**  
@@ -22,19 +27,9 @@
 ---
 
 ## Education
-
-### Stanford University, CA  
-**Master of Science in Epidemiology and Clinical Research (Sept. 2023 – July 2025)**  
-- GPA: 3.72  
-
-### Denmark Technical University, Denmark  
-**MSc in Biomedical Engineering – Specialization in Machine Learning and Signal Processing (Aug. 2020 – April 2023)**  
-- Specialization in machine learning applications for biomedical data  
-
-### Università Degli Studi Di Genova, Italy  
-**BSc in Biomedical Engineering (Sept. 2014 – Feb. 2020)**  
-- Thesis: Pipeline analysis for categorizing post-stimulus response from SEEG recordings on Go/NoGo  
-- Final Mark: 92  
+- M.S., Epidemiology and Clinical Research | Stanford University, CA | (_June 2025_)
+- M.S., Biomedical Engineering | Denmark Technical University, Denmark | (_April 2023_)
+- M.S., Biomedical Engineering | Università Degli Studi Di Genova, Italy | (_February 2020_)
 
 ---
 
@@ -51,8 +46,3 @@ Collaborated among interdisciplinary research groups as main biostatistician and
 
 ---
 
-## Technical & Analytical Skills
-
-**Programming:** Python, SQL, SAS, R, Matlab  
-**Data Science & Analysis:** Data wrangling, feature engineering, dimensionality reduction, data visualization (ggplot2, Matplotlib, Seaborn), hypothesis testing, analysis of variance  
-**Statistical Modelling & AI:** Re
