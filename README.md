@@ -31,9 +31,6 @@ AWS, distributed training (multi-GPU/multi-node), REST APIs, containerization
 Spanish, English, Italian, Danish (intermediate)  
 
 ---
-
-Let me know if you'd like me to turn this into a LaTeX CV or adjust it for a specific role (e.g. biotech, medtech, AI company).
-
 ## Work Experience
 
 ### Stanford University – Mignot Laboratory  
