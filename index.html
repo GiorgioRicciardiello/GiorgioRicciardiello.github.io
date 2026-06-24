@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giorgio Ricciardiello — AI Scientist & Biomedical Researcher building ML systems that turn physiological signals into clinical insight.">
+  <title>Giorgio Ricciardiello</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <span class="nav-brand">GR</span>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+      <a href="#contact" class="btn-primary nav-cta">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+
+      <div class="hero-left">
+        <div class="hero-photo-wrap">
+          <img
+            src="assets/img/profile.jpg"
+            alt="Giorgio Ricciardiello"
+            class="hero-photo"
+            id="hero-photo"
+            onerror="this.style.display='none';document.getElementById('hero-photo-fallback').style.display='flex';"
+          >
+          <div class="hero-photo-fallback" id="hero-photo-fallback" aria-hidden="true">GR</div>
+        </div>
+        <span class="badge-pill hero-badge">AI Scientist · Mount Sinai</span>
+        <h1 class="hero-name">Giorgio<br>Ricciardiello</h1>
+        <p class="hero-tagline">Building ML systems that turn physiological signals into clinical insight</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Get in touch</a>
+          <a
+            href="https://scholar.google.com/citations?user=JgGh_nwAAAAJ&hl=en"
+            class="btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Publications →</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="viz-card">
+          <svg
+            id="hero-svg"
+            viewBox="0 0 540 300"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Kaplan-Meier disease-free survival curves and multimodal physiological signal traces (heart rate and SpO2)"
+          >
+            <rect width="540" height="300" fill="#171717" rx="12"/>
+
+            <!-- ── KM PANEL ── -->
+
+            <!-- Axes -->
+            <line x1="50" y1="22" x2="50" y2="172" stroke="#2d2d2d" stroke-width="1"/>
+            <line x1="50" y1="172" x2="522" y2="172" stroke="#2d2d2d" stroke-width="1"/>
+
+            <!-- Y gridlines -->
+            <line x1="50" y1="97" x2="522" y2="97" stroke="#232323" stroke-width="0.5" stroke-dasharray="3 4"/>
+            <line x1="50" y1="22" x2="522" y2="22" stroke="#232323" stroke-width="0.5" stroke-dasharray="3 4"/>
+
+            <!-- Y labels -->
+            <text x="44" y="25"  fill="#60646c" font-size="8" text-anchor="end" font-family="Inter,sans-serif">100%</text>
+            <text x="44" y="100" fill="#60646c" font-size="8" text-anchor="end" font-family="Inter,sans-serif">75%</text>
+            <text x="44" y="175" fill="#60646c" font-size="8" text-anchor="end" font-family="Inter,sans-serif">50%</text>
+
+            <!-- X labels -->
+            <text x="50"  y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">0</text>
+            <text x="129" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">2</text>
+            <text x="207" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">4</text>
+            <text x="286" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">6</text>
+            <text x="365" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">8</text>
+            <text x="443" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">10</text>
+            <text x="522" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">12</text>
+
+            <!-- Axis label -->
+            <text x="286" y="194" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">Years since baseline</text>
+
+            <!-- Panel label -->
+            <text x="50" y="13" fill="#60646c" font-size="8" font-weight="600" font-family="Inter,sans-serif" letter-spacing="0.8">PARKINSON'S DISEASE-FREE SURVIVAL</text>
+
+            <!-- Low-risk CI band (cyan, subtle) -->
+            <polygon
+              points="50,22 89,22 89,28 129,28 129,36 168,36 168,44 207,44 207,50 286,50 286,59 365,59 365,65 443,65 443,74 522,74
+                      522,90 443,82 365,73 286,67 207,58 168,52 129,44 89,36 50,30"
+              fill="#47c2ff" fill-opacity="0.07" stroke="none"/>
+
+            <!-- High-risk CI band (orange, subtle) -->
+            <polygon
+              points="50,22 89,22 89,46 129,46 129,76 168,76 168,97 207,97 207,112 247,112 247,124 286,124 286,133 365,133 365,142 443,142 443,148 483,148 483,151 522,151
+                      522,163 483,163 443,158 365,154 286,145 247,136 207,124 168,109 129,88 89,58 50,34"
+              fill="#f97316" fill-opacity="0.07" stroke="none"/>
+
+            <!-- Low-risk KM curve (cyan) — step function, drops slowly to ~80% -->
+            <polyline id="km-low"
+              points="50,22 89,22 89,34 129,34 129,43 168,43 168,52 207,52 207,58 286,58 286,67 365,67 365,73 443,73 443,82 522,82"
+              fill="none" stroke="#47c2ff" stroke-width="2"
+              stroke-linecap="square" stroke-linejoin="miter"/>
+
+            <!-- High-risk KM curve (orange) — step function, drops to ~55% -->
+            <polyline id="km-high"
+              points="50,22 89,22 89,52 129,52 129,82 168,82 168,103 207,103 207,118 247,118 247,130 286,130 286,139 365,139 365,148 443,148 443,154 483,154 483,157 522,157"
+              fill="none" stroke="#f97316" stroke-width="2"
+              stroke-linecap="square" stroke-linejoin="miter"/>
+
+            <!-- Legend -->
+            <line x1="338" y1="14" x2="353" y2="14" stroke="#47c2ff" stroke-width="2"/>
+            <text x="356" y="17" fill="#47c2ff" font-size="8" font-family="Inter,sans-serif">Low risk</text>
+            <line x1="410" y1="14" x2="425" y2="14" stroke="#f97316" stroke-width="2"/>
+            <text x="428" y="17" fill="#f97316" font-size="8" font-family="Inter,sans-serif">High risk</text>
+
+            <!-- ── DIVIDER ── -->
+            <line x1="16" y1="200" x2="524" y2="200" stroke="#242424" stroke-width="1"/>
+
+            <!-- ── SIGNALS PANEL ── -->
+
+            <!-- Panel label -->
+            <text x="50" y="213" fill="#60646c" font-size="8" font-weight="600" font-family="Inter,sans-serif" letter-spacing="0.8">MULTIMODAL PHYSIOLOGICAL SIGNALS</text>
+
+            <!-- Track labels -->
+            <text x="54" y="238" fill="#f97316" font-size="8" font-family="'JetBrains Mono',monospace">HR</text>
+            <text x="54" y="268" fill="#47c2ff" font-size="8" font-family="'JetBrains Mono',monospace">SpO₂</text>
+
+            <!-- Unit labels -->
+            <text x="519" y="238" fill="#3a3a3a" font-size="7" text-anchor="end" font-family="'JetBrains Mono',monospace">bpm</text>
+            <text x="519" y="268" fill="#3a3a3a" font-size="7" text-anchor="end" font-family="'JetBrains Mono',monospace">%</text>
+
+            <!-- HR waveform (orange) — heart-rate fluctuation during sleep study -->
+            <polyline id="hr-trace"
+              points="75,238 88,233 97,240 108,233 119,241 130,232 142,238 154,243 165,234 177,240 188,235 200,242 213,231 225,238 237,244 249,235 261,240 272,236 284,244 296,231 309,237 321,244 333,234 345,241 357,236 369,244 381,231 393,238 405,244 417,233 429,239 441,235 453,242 465,232 477,238 489,242 501,234 511,239 520,237"
+              fill="none" stroke="#f97316" stroke-width="1.5"
+              stroke-linejoin="round" stroke-linecap="round"/>
+
+            <!-- SpO2 waveform (cyan) — mostly flat with occasional desaturations -->
+            <polyline id="spo2-trace"
+              points="75,263 118,263 128,268 140,263 195,263 206,272 220,263 280,263 291,269 305,263 360,263 371,270 385,263 435,263 447,268 462,263 510,263 520,263"
+              fill="none" stroke="#47c2ff" stroke-width="1.5"
+              stroke-linejoin="round" stroke-linecap="round"/>
+
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="section" id="about">
+    <div class="container container--narrow">
+      <span class="section-label">About</span>
+      <p class="about-text">
+        I'm a Machine Learning Scientist and Biomedical Researcher with 5+ years building multimodal AI and signal-processing systems for neural, wearable, and clinical data. My pipelines span cohorts exceeding 2 million patients — from actigraphy-derived sleep biomarkers that predict Parkinson's disease a decade before diagnosis, to population-scale causal inference for stroke and dementia prevention.
+      </p>
+      <p class="about-text">
+        Currently a Data Analyst II at Mount Sinai. Previously a Research Assistant in the Mignot Laboratory at Stanford. I hold an MS in Epidemiology &amp; Clinical Research from Stanford, an MS in Biomedical Engineering from the Technical University of Denmark, and a BS in Biomedical Engineering from the University of Genoa.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section class="section section--soft" id="experience">
+    <div class="container">
+      <span class="section-label">Experience</span>
+      <h2 class="section-heading">Where I've worked</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Aug 2025 – Present</span>
+            <div class="timeline-role">Data Analyst II</div>
+            <div class="timeline-org">Mount Sinai</div>
+            <p class="timeline-desc">Multimodal ML pipelines integrating wearable sensor data and EHR outcomes. Causal inference platform analyzing stroke and dementia prevention strategies at population scale using AIPW, TMLE, and marginal structural models.</p>
+            <div class="pill-group">
+              <span class="badge-pill">2.2M patients</span>
+              <span class="badge-pill">HR 4.69</span>
+              <span class="badge-pill">AUC 0.88</span>
+              <span class="badge-pill">HPC · Distributed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Sep 2023 – Aug 2025</span>
+            <div class="timeline-role">Research Assistant</div>
+            <div class="timeline-org">Stanford University — Mignot Laboratory</div>
+            <p class="timeline-desc">ML diagnostic classifier for Narcolepsy Type 1. Large-scale benchmarking across 69,000 polysomnography records. Conv-LSTM and CNN models for automated REM Sleep Behavior Disorder detection with cross-cohort generalization.</p>
+            <div class="pill-group">
+              <span class="badge-pill">AUC 0.996</span>
+              <span class="badge-pill">99.2% specificity</span>
+              <span class="badge-pill">69K PSG records</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Apr 2023 – Sep 2023</span>
+            <div class="timeline-role">Research Intern</div>
+            <div class="timeline-org">IMP Scandinavia</div>
+            <p class="timeline-desc">Real-time PPG signal-processing algorithms for commercial wearable devices. Validation protocols supporting ISO 13485 and EU MDR regulatory submissions.</p>
+            <div class="pill-group">
+              <span class="badge-pill">3.4× RMSE reduction</span>
+              <span class="badge-pill">+1.37 dB SNR</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-connector">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <span class="timeline-date">Sep 2021 – Mar 2022</span>
+            <div class="timeline-role">Visiting Researcher</div>
+            <div class="timeline-org">Stanford University — Mignot Laboratory</div>
+            <p class="timeline-desc">Contributed to a multinational consortium on digital biomarkers and ML approaches for sleep disorders.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section class="section" id="publications">
+    <div class="container container--narrow">
+      <span class="section-label">Publications</span>
+      <h2 class="section-heading">Research output</h2>
+      <div class="pub-card reveal">
+        <p class="pub-desc">
+          First-author and co-author research in sleep medicine, neurodegeneration, and clinical AI — published in <em>Sleep Medicine</em> and <em>Annals of Clinical and Translational Neurology</em>, with work under review on wearable-derived Parkinson's disease prediction across 95,000 participants.
+        </p>
+        <div class="pub-stats">
+          <div class="pub-stat">
+            <span class="pub-stat-number">3</span>
+            <span class="pub-stat-label">Papers (2026)</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat-number">2</span>
+            <span class="pub-stat-label">First-author</span>
+          </div>
+          <div class="pub-stat">
+            <span class="pub-stat-number">2.2M</span>
+            <span class="pub-stat-label">Patients studied</span>
+          </div>
+        </div>
+        <a
+          href="https://scholar.google.com/citations?user=JgGh_nwAAAAJ&hl=en"
+          class="btn-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >View on Google Scholar →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section class="section section--soft" id="skills">
+    <div class="container">
+      <span class="section-label">Skills</span>
+      <h2 class="section-heading">Technical toolkit</h2>
+      <div class="skills-grid reveal">
+
+        <div class="skill-group">
+          <div class="skill-group-label">ML / AI</div>
+          <div class="pill-group">
+            <span class="badge-pill">PyTorch</span>
+            <span class="badge-pill">PyTorch Lightning</span>
+            <span class="badge-pill">Scikit-Learn</span>
+            <span class="badge-pill">XGBoost</span>
+            <span class="badge-pill">Hugging Face</span>
+            <span class="badge-pill">Foundation Models</span>
+            <span class="badge-pill">LangChain</span>
+            <span class="badge-pill">RAG</span>
+            <span class="badge-pill">Conv-LSTM</span>
+            <span class="badge-pill">Ensemble Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Clinical AI &amp; Data Science</div>
+          <div class="pill-group">
+            <span class="badge-pill">Wearable Analytics</span>
+            <span class="badge-pill">Digital Biomarkers</span>
+            <span class="badge-pill">Survival Analysis</span>
+            <span class="badge-pill">Causal Inference</span>
+            <span class="badge-pill">TMLE</span>
+            <span class="badge-pill">AIPW</span>
+            <span class="badge-pill">Target Trial Emulation</span>
+            <span class="badge-pill">Longitudinal Analysis</span>
+            <span class="badge-pill">PSG / EEG</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-label">Programming</div>
+          <div class="pill-group">
+            <span class="badge-pill">Python</span>
+            <span class="badge-pill">SQL</span>
+            <span class="badge-pill">R</span>
+            <span class="badge-pill">SAS</span>
+            <span class="badge-pill">Bash</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section section--dark" id="contact">
+    <div class="container container--narrow contact-inner reveal">
+      <span class="section-label section-label--dark">Contact</span>
+      <h2 class="section-heading section-heading--dark">Let's connect</h2>
+      <p class="contact-desc">
+        Open to research collaborations, clinical AI consulting, and data science roles at the intersection of medicine and machine learning. Reach out on LinkedIn.
+      </p>
+      <div class="contact-links">
+
+        <a href="https://www.linkedin.com/in/giorgio-ricciardiello/" class="contact-link contact-link--primary" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="3"/>
+            <path d="M7 10v7M7 7v.01M12 10v7M12 13a3 3 0 016 0v4"/>
+          </svg>
+          LinkedIn
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=JgGh_nwAAAAJ&hl=en" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+          </svg>
+          Google Scholar
+        </a>
+
+        <a href="https://github.com/GiorgioRicciardiello" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+          </svg>
+          GitHub
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Giorgio Ricciardiello</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <span class="footer-copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
