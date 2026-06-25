@@ -33,7 +33,7 @@
   <section class="hero" id="top">
     <div class="container hero-inner">
 
-      <div class="hero-left">
+      <div class="hero-text">
         <div class="hero-photo-wrap">
           <img
             src="assets/img/profile.jpg"
@@ -45,7 +45,7 @@
           <div class="hero-photo-fallback" id="hero-photo-fallback" aria-hidden="true">GR</div>
         </div>
         <span class="badge-pill hero-badge">AI Scientist · Mount Sinai</span>
-        <h1 class="hero-name">Giorgio<br>Ricciardiello</h1>
+        <h1 class="hero-name">Giorgio Ricciardiello</h1>
         <p class="hero-tagline">Building ML systems that turn physiological signals into clinical insight</p>
         <div class="hero-ctas">
           <a href="#contact" class="btn-primary">Get in touch</a>
@@ -58,108 +58,179 @@
         </div>
       </div>
 
-      <div class="hero-right">
-        <div class="viz-card">
-          <svg
-            id="hero-svg"
-            viewBox="0 0 540 300"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Kaplan-Meier disease-free survival curves and multimodal physiological signal traces (heart rate and SpO2)"
-          >
-            <rect width="540" height="300" fill="#171717" rx="12"/>
+      <div class="neuro-viz" role="img" aria-label="AI pipeline: EEG/PSG physiological signals processed by a foundation model encoder into clinical predictions">
+        <div class="nv-bg-glow" aria-hidden="true"></div>
 
-            <!-- ── KM PANEL ── -->
+        <!-- LEFT: EEG / PSG Input -->
+        <div class="nv-panel" aria-hidden="true">
+          <div class="nv-panel-label">EEG / PSG Input</div>
+          <div class="eeg-stack">
+            <svg class="eeg-wave" viewBox="0 0 220 54" xmlns="http://www.w3.org/2000/svg">
+              <polyline class="eeg-path" points="0,27 20,27 30,8 45,46 60,12 75,32 90,20 105,38 120,27 140,27 155,10 165,44 180,15 195,30 220,27"/>
+            </svg>
+            <svg class="eeg-wave" viewBox="0 0 220 54" xmlns="http://www.w3.org/2000/svg">
+              <polyline class="eeg-path eeg-path--2" points="0,27 15,27 25,14 40,40 55,18 70,35 85,22 100,36 115,27 135,27 150,12 165,42 175,20 190,30 220,27"/>
+            </svg>
+            <svg class="eeg-wave" viewBox="0 0 220 54" xmlns="http://www.w3.org/2000/svg">
+              <polyline class="eeg-path eeg-path--3" points="0,27 10,27 22,6 38,48 52,16 65,38 80,24 95,40 110,27 130,27 148,8 160,46 175,17 195,31 220,27"/>
+            </svg>
+          </div>
+          <div class="eeg-metrics">
+            <div class="eeg-metric"><span>Delta</span><strong>0.231</strong></div>
+            <div class="eeg-metric"><span>Theta</span><strong>0.487</strong></div>
+            <div class="eeg-metric"><span>Alpha</span><strong>0.612</strong></div>
+            <div class="eeg-metric"><span>Beta</span><strong>0.358</strong></div>
+          </div>
+          <div class="float-nums" aria-hidden="true">
+            <span style="top:12%;left:5%;animation-delay:0s">0.731</span>
+            <span style="top:42%;left:70%;animation-delay:1.2s">0.042</span>
+            <span style="top:62%;left:22%;animation-delay:2.4s">0.889</span>
+            <span style="top:80%;left:58%;animation-delay:3.6s">0.156</span>
+            <span style="top:28%;left:48%;animation-delay:4.8s">0.934</span>
+          </div>
+        </div>
 
-            <!-- Axes -->
-            <line x1="50" y1="22" x2="50" y2="172" stroke="#2d2d2d" stroke-width="1"/>
-            <line x1="50" y1="172" x2="522" y2="172" stroke="#2d2d2d" stroke-width="1"/>
+        <!-- CENTER: Foundation Model Encoder -->
+        <div class="nv-center" aria-hidden="true">
+          <div class="nv-panel-label nv-label-center">Foundation Model Encoder</div>
+          <svg class="nn-svg" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="node-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="pulse-glow" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
 
-            <!-- Y gridlines -->
-            <line x1="50" y1="97" x2="522" y2="97" stroke="#232323" stroke-width="0.5" stroke-dasharray="3 4"/>
-            <line x1="50" y1="22" x2="522" y2="22" stroke="#232323" stroke-width="0.5" stroke-dasharray="3 4"/>
+            <!-- I→H connections -->
+            <line x1="60" y1="70"  x2="160" y2="52"  stroke="rgba(130,190,255,0.18)" stroke-width="1"/>
+            <line x1="60" y1="70"  x2="160" y2="112" stroke="rgba(130,190,255,0.20)" stroke-width="1"/>
+            <line x1="60" y1="70"  x2="160" y2="168" stroke="rgba(130,190,255,0.12)" stroke-width="1"/>
+            <line x1="60" y1="70"  x2="160" y2="228" stroke="rgba(130,190,255,0.07)" stroke-width="1"/>
+            <line x1="60" y1="130" x2="160" y2="52"  stroke="rgba(130,190,255,0.15)" stroke-width="1"/>
+            <line x1="60" y1="130" x2="160" y2="112" stroke="rgba(130,190,255,0.24)" stroke-width="1"/>
+            <line x1="60" y1="130" x2="160" y2="168" stroke="rgba(130,190,255,0.24)" stroke-width="1"/>
+            <line x1="60" y1="130" x2="160" y2="228" stroke="rgba(130,190,255,0.12)" stroke-width="1"/>
+            <line x1="60" y1="190" x2="160" y2="52"  stroke="rgba(130,190,255,0.07)" stroke-width="1"/>
+            <line x1="60" y1="190" x2="160" y2="112" stroke="rgba(130,190,255,0.12)" stroke-width="1"/>
+            <line x1="60" y1="190" x2="160" y2="168" stroke="rgba(130,190,255,0.18)" stroke-width="1"/>
+            <line x1="60" y1="190" x2="160" y2="228" stroke="rgba(130,190,255,0.22)" stroke-width="1"/>
 
-            <!-- Y labels -->
-            <text x="44" y="25"  fill="#60646c" font-size="8" text-anchor="end" font-family="Inter,sans-serif">100%</text>
-            <text x="44" y="100" fill="#60646c" font-size="8" text-anchor="end" font-family="Inter,sans-serif">75%</text>
-            <text x="44" y="175" fill="#60646c" font-size="8" text-anchor="end" font-family="Inter,sans-serif">50%</text>
+            <!-- H→O connections -->
+            <line x1="160" y1="52"  x2="260" y2="100" stroke="rgba(110,231,183,0.18)" stroke-width="1"/>
+            <line x1="160" y1="52"  x2="260" y2="160" stroke="rgba(110,231,183,0.10)" stroke-width="1"/>
+            <line x1="160" y1="112" x2="260" y2="100" stroke="rgba(110,231,183,0.24)" stroke-width="1"/>
+            <line x1="160" y1="112" x2="260" y2="160" stroke="rgba(110,231,183,0.18)" stroke-width="1"/>
+            <line x1="160" y1="168" x2="260" y2="100" stroke="rgba(110,231,183,0.18)" stroke-width="1"/>
+            <line x1="160" y1="168" x2="260" y2="160" stroke="rgba(110,231,183,0.24)" stroke-width="1"/>
+            <line x1="160" y1="228" x2="260" y2="100" stroke="rgba(110,231,183,0.10)" stroke-width="1"/>
+            <line x1="160" y1="228" x2="260" y2="160" stroke="rgba(110,231,183,0.18)" stroke-width="1"/>
 
-            <!-- X labels -->
-            <text x="50"  y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">0</text>
-            <text x="129" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">2</text>
-            <text x="207" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">4</text>
-            <text x="286" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">6</text>
-            <text x="365" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">8</text>
-            <text x="443" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">10</text>
-            <text x="522" y="183" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">12</text>
+            <!-- Pulse dots I→H -->
+            <circle r="3.5" fill="#00e5ff" filter="url(#pulse-glow)">
+              <animateMotion dur="1.6s" begin="0s" repeatCount="indefinite" path="M60,70 L160,112"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.6s" begin="0s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3.5" fill="#00e5ff" filter="url(#pulse-glow)">
+              <animateMotion dur="1.4s" begin="0.7s" repeatCount="indefinite" path="M60,130 L160,52"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.4s" begin="0.7s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3.5" fill="#00e5ff" filter="url(#pulse-glow)">
+              <animateMotion dur="1.5s" begin="1.3s" repeatCount="indefinite" path="M60,190 L160,168"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.5s" begin="1.3s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3.5" fill="#00e5ff" filter="url(#pulse-glow)">
+              <animateMotion dur="1.7s" begin="2.1s" repeatCount="indefinite" path="M60,130 L160,228"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.7s" begin="2.1s" repeatCount="indefinite"/>
+            </circle>
 
-            <!-- Axis label -->
-            <text x="286" y="194" fill="#60646c" font-size="8" text-anchor="middle" font-family="Inter,sans-serif">Years since baseline</text>
+            <!-- Pulse dots H→O -->
+            <circle r="3.5" fill="#6ee7b7" filter="url(#pulse-glow)">
+              <animateMotion dur="1.3s" begin="0.4s" repeatCount="indefinite" path="M160,112 L260,100"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.3s" begin="0.4s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3.5" fill="#6ee7b7" filter="url(#pulse-glow)">
+              <animateMotion dur="1.4s" begin="1.0s" repeatCount="indefinite" path="M160,168 L260,160"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.4s" begin="1.0s" repeatCount="indefinite"/>
+            </circle>
+            <circle r="3.5" fill="#6ee7b7" filter="url(#pulse-glow)">
+              <animateMotion dur="1.3s" begin="1.8s" repeatCount="indefinite" path="M160,52 L260,100"/>
+              <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="1.3s" begin="1.8s" repeatCount="indefinite"/>
+            </circle>
 
-            <!-- Panel label -->
-            <text x="50" y="13" fill="#60646c" font-size="8" font-weight="600" font-family="Inter,sans-serif" letter-spacing="0.8">PARKINSON'S DISEASE-FREE SURVIVAL</text>
+            <!-- Input nodes -->
+            <circle cx="60" cy="70"  r="8" fill="#bde0ff" filter="url(#node-glow)"/>
+            <circle cx="60" cy="130" r="8" fill="#bde0ff" filter="url(#node-glow)"/>
+            <circle cx="60" cy="190" r="8" fill="#bde0ff" filter="url(#node-glow)"/>
 
-            <!-- Low-risk CI band (cyan, subtle) -->
-            <polygon
-              points="50,22 89,22 89,28 129,28 129,36 168,36 168,44 207,44 207,50 286,50 286,59 365,59 365,65 443,65 443,74 522,74
-                      522,90 443,82 365,73 286,67 207,58 168,52 129,44 89,36 50,30"
-              fill="#47c2ff" fill-opacity="0.07" stroke="none"/>
+            <!-- Hidden nodes -->
+            <circle cx="160" cy="52"  r="8" fill="#93c5fd" filter="url(#node-glow)"/>
+            <circle cx="160" cy="112" r="8" fill="#93c5fd" filter="url(#node-glow)"/>
+            <circle cx="160" cy="168" r="8" fill="#93c5fd" filter="url(#node-glow)"/>
+            <circle cx="160" cy="228" r="8" fill="#93c5fd" filter="url(#node-glow)"/>
 
-            <!-- High-risk CI band (orange, subtle) -->
-            <polygon
-              points="50,22 89,22 89,46 129,46 129,76 168,76 168,97 207,97 207,112 247,112 247,124 286,124 286,133 365,133 365,142 443,142 443,148 483,148 483,151 522,151
-                      522,163 483,163 443,158 365,154 286,145 247,136 207,124 168,109 129,88 89,58 50,34"
-              fill="#f97316" fill-opacity="0.07" stroke="none"/>
+            <!-- Output nodes -->
+            <circle cx="260" cy="100" r="8" fill="#6ee7b7" filter="url(#node-glow)"/>
+            <circle cx="260" cy="160" r="8" fill="#6ee7b7" filter="url(#node-glow)"/>
 
-            <!-- Low-risk KM curve (cyan) — step function, drops slowly to ~80% -->
-            <polyline id="km-low"
-              points="50,22 89,22 89,34 129,34 129,43 168,43 168,52 207,52 207,58 286,58 286,67 365,67 365,73 443,73 443,82 522,82"
-              fill="none" stroke="#47c2ff" stroke-width="2"
-              stroke-linecap="square" stroke-linejoin="miter"/>
-
-            <!-- High-risk KM curve (orange) — step function, drops to ~55% -->
-            <polyline id="km-high"
-              points="50,22 89,22 89,52 129,52 129,82 168,82 168,103 207,103 207,118 247,118 247,130 286,130 286,139 365,139 365,148 443,148 443,154 483,154 483,157 522,157"
-              fill="none" stroke="#f97316" stroke-width="2"
-              stroke-linecap="square" stroke-linejoin="miter"/>
-
-            <!-- Legend -->
-            <line x1="338" y1="14" x2="353" y2="14" stroke="#47c2ff" stroke-width="2"/>
-            <text x="356" y="17" fill="#47c2ff" font-size="8" font-family="Inter,sans-serif">Low risk</text>
-            <line x1="410" y1="14" x2="425" y2="14" stroke="#f97316" stroke-width="2"/>
-            <text x="428" y="17" fill="#f97316" font-size="8" font-family="Inter,sans-serif">High risk</text>
-
-            <!-- ── DIVIDER ── -->
-            <line x1="16" y1="200" x2="524" y2="200" stroke="#242424" stroke-width="1"/>
-
-            <!-- ── SIGNALS PANEL ── -->
-
-            <!-- Panel label -->
-            <text x="50" y="213" fill="#60646c" font-size="8" font-weight="600" font-family="Inter,sans-serif" letter-spacing="0.8">MULTIMODAL PHYSIOLOGICAL SIGNALS</text>
-
-            <!-- Track labels -->
-            <text x="54" y="238" fill="#f97316" font-size="8" font-family="'JetBrains Mono',monospace">HR</text>
-            <text x="54" y="268" fill="#47c2ff" font-size="8" font-family="'JetBrains Mono',monospace">SpO₂</text>
-
-            <!-- Unit labels -->
-            <text x="519" y="238" fill="#3a3a3a" font-size="7" text-anchor="end" font-family="'JetBrains Mono',monospace">bpm</text>
-            <text x="519" y="268" fill="#3a3a3a" font-size="7" text-anchor="end" font-family="'JetBrains Mono',monospace">%</text>
-
-            <!-- HR waveform (orange) — heart-rate fluctuation during sleep study -->
-            <polyline id="hr-trace"
-              points="75,238 88,233 97,240 108,233 119,241 130,232 142,238 154,243 165,234 177,240 188,235 200,242 213,231 225,238 237,244 249,235 261,240 272,236 284,244 296,231 309,237 321,244 333,234 345,241 357,236 369,244 381,231 393,238 405,244 417,233 429,239 441,235 453,242 465,232 477,238 489,242 501,234 511,239 520,237"
-              fill="none" stroke="#f97316" stroke-width="1.5"
-              stroke-linejoin="round" stroke-linecap="round"/>
-
-            <!-- SpO2 waveform (cyan) — mostly flat with occasional desaturations -->
-            <polyline id="spo2-trace"
-              points="75,263 118,263 128,268 140,263 195,263 206,272 220,263 280,263 291,269 305,263 360,263 371,270 385,263 435,263 447,268 462,263 510,263 520,263"
-              fill="none" stroke="#47c2ff" stroke-width="1.5"
-              stroke-linejoin="round" stroke-linecap="round"/>
-
+            <!-- Layer labels -->
+            <text x="60"  y="248" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" font-weight="500" fill="rgba(189,224,255,0.55)">Signals</text>
+            <text x="160" y="248" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" font-weight="500" fill="rgba(147,197,253,0.55)">Encoder</text>
+            <text x="260" y="248" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" font-weight="500" fill="rgba(110,231,183,0.55)">Latent</text>
           </svg>
         </div>
-      </div>
+
+        <!-- RIGHT: Clinical Predictions -->
+        <div class="nv-panel" aria-hidden="true">
+          <div class="nv-panel-label">Clinical Prediction</div>
+          <div class="pred-list">
+            <div class="pred-row">
+              <div class="pred-header">
+                <span class="pred-name">Narcolepsy T1</span>
+                <span class="pred-pct">AUC .996</span>
+              </div>
+              <div class="pred-bar-track">
+                <div class="pred-bar" style="--w:99"></div>
+              </div>
+            </div>
+            <div class="pred-row">
+              <div class="pred-header">
+                <span class="pred-name">REM-BD Screen</span>
+                <span class="pred-pct">AUC .88</span>
+              </div>
+              <div class="pred-bar-track">
+                <div class="pred-bar" style="--w:88"></div>
+              </div>
+            </div>
+            <div class="pred-row">
+              <div class="pred-header">
+                <span class="pred-name">Parkinson's Risk</span>
+                <span class="pred-pct">HR 4.69</span>
+              </div>
+              <div class="pred-bar-track">
+                <div class="pred-bar pred-bar--warm" style="--w:78"></div>
+              </div>
+            </div>
+            <div class="pred-row">
+              <div class="pred-header">
+                <span class="pred-name">OSA Screening</span>
+                <span class="pred-pct">69K PSG</span>
+              </div>
+              <div class="pred-bar-track">
+                <div class="pred-bar pred-bar--warm" style="--w:72"></div>
+              </div>
+            </div>
+          </div>
+          <div class="pred-footer">
+            <div class="pred-stat"><span>Specificity</span><strong>99.2%</strong></div>
+            <div class="pred-stat"><span>Cohort</span><strong>2.2M</strong></div>
+          </div>
+        </div>
+
+      </div><!-- end .neuro-viz -->
 
     </div>
   </section>

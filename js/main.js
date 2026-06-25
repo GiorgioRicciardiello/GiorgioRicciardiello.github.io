@@ -1,26 +1,10 @@
-/* ── SVG ANIMATION ON LOAD ── */
-(function initSvgAnimation() {
-  const entries = [
-    { id: 'km-low',      delay: 200,  duration: 1500 },
-    { id: 'km-high',     delay: 500,  duration: 1500 },
-    { id: 'hr-trace',    delay: 1900, duration: 1100 },
-    { id: 'spo2-trace',  delay: 2200, duration: 1100 },
-  ];
-
-  entries.forEach(({ id, delay, duration }) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-
-    const length = el.getTotalLength();
-    el.style.strokeDasharray = length;
-    el.style.strokeDashoffset = length;
-    el.style.transition = 'none';
-
-    setTimeout(() => {
-      el.style.transition = `stroke-dashoffset ${duration}ms cubic-bezier(0.4, 0, 0.2, 1)`;
-      el.style.strokeDashoffset = '0';
-    }, delay);
-  });
+/* ── PREDICTION BARS ON LOAD ── */
+(function initPredBars() {
+  setTimeout(() => {
+    document.querySelectorAll('.pred-bar').forEach((bar) => {
+      bar.classList.add('loaded');
+    });
+  }, 300);
 })();
 
 /* ── SCROLL REVEAL ── */
