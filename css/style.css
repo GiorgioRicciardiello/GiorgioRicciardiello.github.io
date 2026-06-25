@@ -33,7 +33,7 @@
   --space-lg:    24px;
   --space-xl:    32px;
   --space-xxl:   48px;
-  --space-section: 96px;
+  --space-section: 60px;
 
   --radius-xs:   4px;
   --radius-sm:   6px;
@@ -219,7 +219,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ── HERO ── */
 .hero {
-  min-height: calc(100vh - 64px);
+  min-height: auto;
   background: var(--color-canvas);
   position: relative;
   overflow: hidden;
@@ -364,7 +364,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1.15;
   letter-spacing: -1.08px;
   color: var(--color-ink);
-  margin-bottom: var(--space-xxl);
+  margin-bottom: var(--space-xl);
 }
 
 .section-heading--dark {
@@ -393,7 +393,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: grid;
   grid-template-columns: 20px 1fr;
   gap: var(--space-xl);
-  padding-bottom: var(--space-xxl);
+  padding-bottom: var(--space-xl);
 }
 
 .timeline-item:last-child {
